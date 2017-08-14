@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 	get 'main/team'
 	get 'main/contact'
 
-	#root 'sign/in_new'
+	root 'main#index'
 
   get 'sign/up_new'
   get 'sign/up_create'=>'sign#up_new'
