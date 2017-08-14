@@ -14,3 +14,6 @@ Rails.application.config.assets.precompile += %w( main.css )
 Rails.application.config.assets.precompile += %w( jquery.horizonScroll.js )
 Rails.application.config.assets.precompile += %w( jquery.hover3d.js )
 Rails.application.config.assets.precompile += %w( scripts.js )
+
+Rails.application.config.assets.precompile += %w( bg.jpg )
+
