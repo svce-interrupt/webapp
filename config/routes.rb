@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'main/index'
+	get 'main/about'
+	get 'main/solo'
+	get 'main/team'
+	get 'main/contact'
+
+	#root 'sign/in_new'
+
   get 'sign/up_new'
   get 'sign/up_create'=>'sign#up_new'
 	post 'sign/up_create'
