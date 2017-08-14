@@ -26,6 +26,8 @@ Rails.application.configure do
   config.assets.compile = false
   ##added by me to precompile images.
   config.assets.precompile += %w[*.png *.jpg *.jpeg *.gif] 
+  config.assets.digest = true
+  ##
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 

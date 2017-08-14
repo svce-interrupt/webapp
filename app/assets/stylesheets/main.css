@@ -1,9 +1,10 @@
 /*Background*/
 html {
 	background-color: hsla(200,40%,30%,.4);
-	background-image:
-		url('bg.jpg');
-	background-repeat: repeat;
+	
+  background-image: url('bg.jpg');
+	
+  background-repeat: repeat;
     background-position:0 0;
     background-size: 40%;
 	animation: 50s para infinite linear;
