@@ -1,5 +1,8 @@
 <% session[:return_to] ||= request.referer %>
 
+<!--
+____error messages from validations______
+-->
 <% if @user.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-danger">
@@ -12,17 +15,25 @@
     </ul>
   </div>
 <% end %>
+<!--
+_______________________________________
+-->
 
 <h3>Sign In</h3>
-<div id="sign_in_form">
-<%= form_tag sign_in_create_path do %>
 
-<input type="text" name="email" placeholder="email">
+<%= form_for(:user, url: sign_in_create_path) do |f| %>
+
+	<%= f.label :email %>
+    <%= f.email_field :email %>
 <br>
-<label>password</label>
+	<%= f.label :password %>
+    <%= f.password_field :password %>
 <br>
-<input type="password" name="password">
+	<%= f.label :remember_me do %>
+     <input type="checkbox" name="user[remember_me]" value="1"> 
+        <span>Remember me on this computer</span>
+    <% end %>
 <br>
-<input type="submit" action="submit" value="Sign In">
+<%= f.submit "Log in", class: "btn btn-primary" %>
 <% end %>
-</div> 
+<p>New user? <%= link_to "Sign up now!", sign_up_new_path %></p>
