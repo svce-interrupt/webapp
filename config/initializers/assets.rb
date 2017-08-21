@@ -11,7 +11,7 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( main.css )
 
-Rails.application.config.assets.precompile += %w( jquery.horizonScroll.js )
+#Rails.application.config.assets.precompile += %w( jquery.horizonScroll.js )
 Rails.application.config.assets.precompile += %w( jquery.hover3d.js )
 Rails.application.config.assets.precompile += %w( scripts.js )
 
