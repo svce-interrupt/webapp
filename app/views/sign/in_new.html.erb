@@ -29,10 +29,10 @@ _______________________________________
 	<%= f.label :password %>
     <%= f.password_field :password %>
 <br>
-	<%= f.label :remember_me do %>
+	<%= f.label :remember_me do %> <% end %>
      <input type="checkbox" name="user[remember_me]" value="1"> 
         <span>Remember me on this computer</span>
-    <% end %>
+    
 <br>
 <%= f.submit "Log in", class: "btn btn-primary" %>
 <% end %>
