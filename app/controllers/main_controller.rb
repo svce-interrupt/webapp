@@ -9,7 +9,8 @@ class MainController < ApplicationController
       flash[:success] = "successfully Registered"
       redirect_to root_path
     else
-      flash.now[:error] = "Sorry, Registration failed"
+      flash.now[:error] = "Sorry, Registration failed, Please fill the form properly! or The email is already taken"
+      render :index
     end
   end
 

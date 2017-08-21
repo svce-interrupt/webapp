@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'main/index'
   post 'main/register'
+  get 'main/register'
 	get 'main/about'
 	get 'main/solo'
 	get 'main/team'
