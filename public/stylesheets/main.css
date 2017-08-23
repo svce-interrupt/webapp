@@ -1,0 +1,332 @@
+/*Background*/
+html {
+	background-color: hsla(200,40%,30%,.4);
+	background-image: url('bg.jpg');
+	background-repeat: repeat;
+    background-size: 60%;
+	animation: 50s para infinite linear;
+	color: white;
+	}
+
+@keyframes para {
+	100% {
+		background-position: 0px 100%;
+		}
+}
+
+@media screen and (max-width: 720px){
+    html {
+        background-size: 200%;
+    }
+}
+
+/*Add CSS Here*/
+
+h1 {
+    text-align: center;
+}
+
+section {
+	height: 100vh;
+	width: 100%;
+	padding: 6% 0;
+	display: block;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.page {
+    padding: 5em;
+    margin: auto 5%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.bold-text {
+	font-weight: bold;
+	font-size: 2em;
+	color: black;
+}
+
+.modal-content {
+    padding: 2em;
+}
+
+/*Event Boxes*/
+.event {
+   border:1px solid rgba(193,79,82,1);
+   background-color:transparent;
+   -webkit-transition: all 0.1s;
+   -moz-transition: all 0.1s;
+   transition: all 0.1s;
+}
+
+.event:hover {
+   -ms-transform: scale(1.1,1.1); /* IE 9 */
+   -webkit-transform: scale(1.1,1.1); /* Safari */
+   transform: scale(1.1,1.1);
+   -webkit-box-shadow: 10px 10px 91px 0px rgba(193,79,82,1);
+   -moz-box-shadow: 10px 10px 91px 0px rgba(193,79,82,1);
+   box-shadow: 10px 10px 91px 0px rgba(193,79,82,1);
+   border-right:1px solid transparent;
+   border-bottom:1px solid transparent;
+   background-color:#fff;
+}
+
+.event h5 {
+   color:#fff;
+   padding: 2em;
+   text-align: center;
+}
+
+.event:hover h5{
+   color:black;
+}
+
+/*Mobile specific*/
+@media screen and (max-width: 600px){
+    .page {
+        padding: 2em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .text-center {
+    	text-align: justify;
+    }
+
+    .event h5 {
+       padding: 0.1em;
+    }
+}
+
+/*Glitch Text Effect*/
+.glitch {
+    margin: 5% auto;
+}
+
+.glitchText {
+    text-align: center;
+    color: #fff;
+    /*Create overlap*/
+    margin: 0;
+    line-height: 0;
+    /*Animation*/
+    animation: glitch1 2s infinite;
+}
+
+.glitch > h1:nth-child(2) {
+  color: #67f3da;
+  animation: glitch2 2s infinite;
+}
+
+.glitch > h1:nth-child(3) {
+  color: #f16f6f;
+  animation: glitch3 2s infinite;
+}
+
+@keyframes glitch1 {
+  0% {
+    opacity: 1;
+  }
+  7% {
+    opacity: 0.75;
+  }
+  10% {
+    opacity: 1;
+  }
+  27% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.75;
+  }
+  35% {
+    opacity: 1;
+  }
+  52% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+  72% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+@keyframes glitch3 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+/*Laptop image 3D hover movement*/
+.logo {
+   border-radius: 10px;
+   background-color:rgba(255,255,255,0.2);
+   cursor:pointer;
+
+   margin:2% auto;
+   width: 230px;
+}
+
+.lodo-list:after {
+   content: " ";
+   display: block;
+   clear: both;
+}
+
+.logo__card {
+   position: relative;
+   width: 230px;
+   height: 230px;
+   transition: 0s ease-out;
+}
+
+.logo [class*="layer"] {
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+}
+
+.logo .layer {
+   margin-left:15px;
+   margin-top:15px;
+   width:200px;
+   height:200px;
+   -webkit-transform: translateZ(30px);
+   transform: translateZ(30px);
+}
+
+.logo .shine {
+   border-radius: 10px;
+}
+.btn-floating{
+	background-color:rgba(78, 143, 0,0.4) !important;
+}
