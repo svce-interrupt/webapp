@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interrupt '17</title>
+    <%= csrf_meta_tags %>
+
+    <%#= stylesheet_link_tag    'application', media: 'all' %>
+    <%#= javascript_include_tag 'application' %>
+
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Interrupt Web Team: Akash Saravanan, Arvind Hasti, Nikhil Kumaran, Keshav Aditya, Vijai, Vikram Anand">
+   
+    
+  <!-- Compiled and minified CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <!-- Custom style -->
+  <link href="/stylesheets/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+	<!-- Home Button
+	================================================== -->
+	<div class="fixed-action-btn">
+	  <a class="btn-floating btn-large" href="#home">
+		<i class="large material-icons">arrow_upward</i>
+	  </a>
+	</div>
+  	<!-- Nav Bar
+	================================================== -->
+	<div class="navbar-fixed">
+		<nav id="navbar" class="teal">
+			<div class="nav-wrapper">
+			  <a href="#home" class="center brand-logo">Interrupt 2017</a>
+			  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			  <ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#events">Events</a></li>
+				<li><a href="#team">Team</a></li>
+			  </ul>
+			</div>
+		</nav>
+	</div>
+	<ul class="side-nav" id="mobile-demo">
+	  <li><a href="#home">Home</a></li>
+	  <li><a href="#about">About</a></li>
+	  <li><a href="#events">Events</a></li>
+	  <li><a href="#team">Team</a></li>
+	</ul>
+
+
+  <!--Flash Messages(if any)-->
+  	<% flash.each do |name, message| %>
+  		<div class="<%= name %>"><%= message %></div>
+  	<% end %>
+  <!--End of flash-->	
+
+    <%= yield %>
+
+  
+  <!-- core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<!-- Compiled and minified JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write("<script src="../../assets/js/vendor/jquery.min.js"><\/script>")</script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+	<!-- Scripts for image hover effect and scroll reveal -->
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	<script src="/javascripts/jquery.hover3d.js"></script>
+	<!-- Custom scripts -->
+    <script src="/javascripts/scripts.js"></script>
+    <!--
+    ================================================== -->  
+  
+  </body>
+</html>
