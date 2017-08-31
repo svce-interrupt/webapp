@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'sign/in_new'
+  post 'sign/in_create'
+  get 'sign/up_new'
+  post 'sign/up_create'
+  get 'sign/destroy'
+
 	root 'main#index'
   get 'main/index'
   post 'main/register'
