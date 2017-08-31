@@ -1,6 +1,6 @@
 class SignController < ApplicationController
-  #sign IN 
-  #up,in-new are not required.
+  ##sign IN 
+  #up-new,in-new are not required.
   def in_new
   	if session[:user_id] == nil
   		@user = User.new
@@ -13,6 +13,14 @@ class SignController < ApplicationController
   end
 
   def in_create
+  	###in_new code to here.
+  	if session[:user_id] != nil
+  		flash[:error] = "Already Logged In"
+  		#session[:return_to] ||= request.referer
+  		#redirect_to session.delete(:return_to)
+  		redirect_to root_path
+  	else
+  	
   	@user = User.find_by(email: params[:user][:email])
   	if(@user)#if user exists
   		if !!@user.authenticate(params[:user][:password])
@@ -20,14 +28,16 @@ class SignController < ApplicationController
   			flash[:success] = "Successfully Signed In."
   			redirect_to root_path #go to where the user came from.
   		else
-  			flash.now[:error] = "Invalid Credentials"
-  			render :in_new
+  			flash[:error] = "Invalid Credentials"
+  			redirect_to "localhost:3000"
   		end
   	else
   		flash[:error] = "Sign Up please..."
   		redirect_to root_path#sign_up_new_path
   	end
-  end
+
+  end#first else
+  end#def
 
   #sign UP
   def up_new
@@ -57,7 +67,7 @@ class SignController < ApplicationController
   			redirect_to root_path#sign_up_confirm_path
   		else
   			flash[:error] = "Please fill form properly"
-  			render :up_new
+  			redirect_to root_path
   		end
   	end
 

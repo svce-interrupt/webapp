@@ -1,4 +1,5 @@
 <!--Latest Integration:
+	31-08-2017
 	23-08-2017
 	================================================= -->
 
@@ -155,7 +156,10 @@
     	<!--end of toggle-->
     	
     	<!--start of sign up-->
-    	<div id="signup" class="col s12"><form class="col s12" action="#">
+    	<div id="signup" class="col s12">
+    	<div class="col s12">
+    	<%= form_for(:user, url: sign_up_create_path) do %>
+    	</div>
 			<div class="black-text modal-content">
 				<div class="row">
 					<div class="col s12 center-align">
@@ -163,60 +167,61 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="input-field col s12 m6">
+					<div class="input-field col s12">
 						<i class="material-icons prefix black-text text-darken-2">person</i>
-						<input id="first_name" type="text" class="validate" data-length="20">
-						<label for="first_name">First Name</label>
-					</div>
-					<div class="input-field col s12 m6">
-						<i class="material-icons prefix black-text text-darken-2">person</i>
-						<input id="last_name" type="text" class="validate" data-length="20">
-						<label for="last_name">Last Name</label>
+						<input name="user[name]" id="first_name" type="text" class="validate" data-length="50">
+						<label for="first_name">Name</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12">
 						<i class="material-icons prefix black-text text-darken-2">school</i>
-						<input id="college" type="text" class="validate" data-length="50">
+						<input name="user[college]" id="college" type="text" class="validate" data-length="50">
 						<label for="college">College Name</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12 m6">
 						<i class="material-icons prefix black-text text-darken-2">email</i>
-						<input id="email" type="email" class="validate" data-length="35">
+						<input name="user[email]" id="email" type="email" class="validate" data-length="35">
 						<label for="email">Email</label>
 					</div>
 					<div class="input-field col s12 m6">
 						<i class="material-icons prefix black-text text-darken-2">local_phone</i>
-						<input id="phone" type="tel" class="validate"  data-length="10">
+						<input name="user[phone]" id="phone" type="tel" class="validate"  data-length="10">
 						<label for="phone">Phone Number</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12 m6">
 						<i class="material-icons prefix black-text text-darken-2">lock</i>
-						<input id="password" type="password" class="validate"  data-length="16">
+						<input name="user[password]" id="password" type="password" class="validate"  data-length="16">
 						<label for="phone">Password</label>
 					</div>
 					<div class="input-field col s12 m6">
 						<i class="material-icons prefix black-text text-darken-2">lock</i>
-						<input id="password_confirm" type="password" class="validate"  data-length="16">
+						<input name="user[password_confirmation]" id="password_confirm" type="password" class="validate"  data-length="16">
 						<label for="phone">Confirm Password</label>
 					</div>
 				</div>
+
+				<input type="submit" name="action" value="sign up">
+				
 				<div class="row">
 					<button type="submit" class="waves-effect waves-light btn blue modal-trigger" href="#popup">Sign Up
 						<i class="material-icons right">send</i>
 					</button>
 				</div>
 			</div>
-		</form>
+		<% end %>
 	</div>
 	<!--end of sign up-->
+
 	<!--Start of sign in-->
 	<div id="signin" class="col s12">
-    	<form class="col s12" action="#">
+    	<div class="col s12">
+    	<%= form_tag sign_in_create_path do %>
+    	</div>
 			<div class="black-text modal-content">
 				<div class="row">
 					<div class="col s12 center-align">
@@ -226,26 +231,29 @@
 				<div class="row">
 					<div class="input-field col s12">
 						<i class="material-icons prefix black-text text-darken-2">email</i>
-						<input id="first_name" type="email" class="validate" data-length="20">
+						<input name="user[email]" id="first_name" type="email" class="validate" data-length="20">
 						<label for="E-mail">E-mail</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12">
 						<i class="material-icons prefix black-text text-darken-2">lock</i>
-						<input id="last_name" type="password" class="validate" data-length="20">
+						<input name="user[password]" id="last_name" type="password" class="validate" data-length="20">
 						<label for="last_name">Password</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col s12 m6">
-						<input name="selectEvent" type="checkbox" id="remember"/>
+						<input name="user[remember]" type="checkbox" id="remember"/>
 						<label for="remember">Remember Me</label>
 					</div>
 					<div class="col s12 m6">
 						<a href="#">Forgot password ?</a>
 					</div>
 				</div>
+				
+				<input type="submit" value="sign in" name="action">
+
 				<div class="row">
 					<div class="input-field col s12">
 						<button type="submit" class="waves-effect waves-light btn blue modal-trigger">Sign In
@@ -254,7 +262,7 @@
 					</div>
 				</div>
 			</div>
-		</form>
+		<% end %>
 	</div>
 		<!--end of sign in-->
  
