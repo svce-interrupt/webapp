@@ -1,8 +1,7 @@
 /*Background*/
 html {
 	background-color: hsla(200,40%,30%,.4);
-	background-image:
-		url('bg.jpg');
+	background-image: url('bg.jpg');
 	background-repeat: repeat;
     background-size: 60%;
 	animation: 50s para infinite linear;
@@ -108,7 +107,7 @@ section {
     }
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 420px){
 	nav .brand-logo {
 		font-size: 1.5em;
 	}

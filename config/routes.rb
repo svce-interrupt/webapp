@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'events/reg'
+
   get 'sign/in_new'
   post 'sign/in_create'
   get 'sign/up_new'

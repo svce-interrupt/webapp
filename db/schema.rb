@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170831123333) do
+ActiveRecord::Schema.define(version: 20170904160027) do
+
+  create_table "events", force: :cascade do |t|
+    t.boolean  "e1"
+    t.boolean  "e2"
+    t.boolean  "e3"
+    t.boolean  "e4"
+    t.boolean  "e5"
+    t.boolean  "e6"
+    t.boolean  "e7"
+    t.boolean  "e8"
+    t.boolean  "e9"
+    t.integer  "users_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["users_id"], name: "index_events_on_users_id"
+  end
 
   create_table "registers", force: :cascade do |t|
     t.string   "first_name"

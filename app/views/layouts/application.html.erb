@@ -44,7 +44,7 @@
         <li><a href="#team">Team</a></li>
 
         <% if logged_in? %>
-        <li><a href="#"><%= User.find_by(id: session[:user_id]).name %></a></li>
+        <li><%= User.find_by(id: session[:user_id]).name %></li>
         <li><a href="/sign/destroy">Log Out</a></li>
         <% end %>
         </ul>

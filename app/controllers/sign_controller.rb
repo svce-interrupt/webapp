@@ -61,6 +61,7 @@ class SignController < ApplicationController
   	else
   		@user = User.new(sign_up_params)
   		if @user.save
+        @user.
   			flash[:success] = "Successfully Signed UP"
   			#directing user from sign up-success to index without sign in.
   			session[:user_id] = User.find_by(email: sign_up_params[:email]).id
