@@ -1,7 +1,8 @@
 /*Background*/
 html {
 	background-color: hsla(200,40%,30%,.4);
-	background-image: url('bg.jpg');
+	background-image:
+		url('bg.jpg');
 	background-repeat: repeat;
     background-size: 60%;
 	animation: 50s para infinite linear;
@@ -28,9 +29,9 @@ h1 {
 
 section {
 	height: 100vh;
-	width: 100%;
-	padding: 6% 0;
+	max-width: 100%;
 	display: block;
+	padding-top: 5em;
 	background: rgba(0, 0, 0, 0.2);
 }
 
@@ -105,6 +106,12 @@ section {
     .event h5 {
        padding: 0.1em;
     }
+}
+
+@media screen and (max-width: 360px){
+	nav .brand-logo {
+		font-size: 1.5em;
+	}
 }
 
 /*Glitch Text Effect*/

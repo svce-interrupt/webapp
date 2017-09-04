@@ -29,13 +29,17 @@
 			<div class="col s10 offset-s1 page text-center">
 				<!-- Modal Trigger -->
 				<div class="col s6 offset-s3">
+					<% if !logged_in? %>
 					<div class="col s12 m5 waves-effect waves-light btn">
 						<a class="modal-trigger white-text" href="#signup_signin">Sign Up/Sign In</a>
 					</div>
+					<% end %>
 					<div class="col s12 m2"></div>
+					<% if logged_in? %>
 					<div class="col s12 m5 waves-effect waves-light btn">
 						<a class="modal-trigger white-text" href="#register">Events_Register</a>
 					</div>
+					<% end %>
 				</div>
 			</div>
 		</div>
