@@ -29,7 +29,7 @@ class SignController < ApplicationController
   			redirect_to root_path #go to where the user came from.
   		else
   			flash[:error] = "Invalid Credentials"
-  			redirect_to "localhost:3000"
+  			redirect_to root_path
   		end
   	else
   		flash[:error] = "Sign Up please..."
