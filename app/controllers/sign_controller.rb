@@ -57,11 +57,11 @@ class SignController < ApplicationController
   	@user = User.find_by(email: sign_up_params[:email])
   	if !!@user
   		flash[:error] = "Email already exists"
-  		redirect_to sign_in_new_path
+  		redirect_to root_path
   	else
   		@user = User.new(sign_up_params)
   		if @user.save
-        @user.
+        #@user.
   			flash[:success] = "Successfully Signed UP"
   			#directing user from sign up-success to index without sign in.
   			session[:user_id] = User.find_by(email: sign_up_params[:email]).id
