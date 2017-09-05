@@ -22,10 +22,10 @@ ActiveRecord::Schema.define(version: 20170905043640) do
     t.boolean  "e7"
     t.boolean  "e8"
     t.boolean  "e9"
-    t.integer  "users_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["users_id"], name: "index_events_on_users_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "registers", force: :cascade do |t|

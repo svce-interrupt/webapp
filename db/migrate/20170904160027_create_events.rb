@@ -12,7 +12,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.boolean :e9
 
 
-      t.references :users, index: true
+      t.references :user, index: true
 
       t.timestamps
 	end
