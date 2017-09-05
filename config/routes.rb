@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'events/reg'
+  post 'events/reg'
 
   get 'sign/in_new'
   post 'sign/in_create'

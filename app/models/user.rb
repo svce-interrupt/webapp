@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   #association to events.
-  #has_one :events, dependent: :destroy
+  has_one :event, dependent: :destroy
 
 	#for virtual remember_token
 	attr_accessor :remember_token

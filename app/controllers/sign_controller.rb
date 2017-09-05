@@ -61,7 +61,9 @@ class SignController < ApplicationController
   	else
   		@user = User.new(sign_up_params)
   		if @user.save
-        #@user.
+        #Create Event Tuple for the new user.
+        @user.event = Event.new(event_create_params)
+        
   			flash[:success] = "Successfully Signed UP"
   			#directing user from sign up-success to index without sign in.
   			session[:user_id] = User.find_by(email: sign_up_params[:email]).id
@@ -137,6 +139,11 @@ class SignController < ApplicationController
   	forget(current_user)	#forget(user) in helper.
     session.delete(:user_id)
     @current_user = nil
+  end
+
+  ##Initially false for all events
+  def event_create_params
+    {e1: 0,e2: 0,e3: 0,e4: 0,e5: 0,e6: 0,e7: 0,e8: 0,e9: 0}
   end
 
 

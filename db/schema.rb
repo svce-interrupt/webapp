@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170905043640) do
+ActiveRecord::Schema.define(version: 20170905061319) do
 
   create_table "events", force: :cascade do |t|
     t.boolean  "e1"
