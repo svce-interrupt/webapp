@@ -11,10 +11,11 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.boolean :e8
       t.boolean :e9
 
+
       t.references :users, index: true
 
       t.timestamps
-    end
+	end
   end
-  add_foreign_key :events, :users
+  
 end
